@@ -1,5 +1,5 @@
 #-----Genome (these are always required)
-genome= #genome sequence (fasta file or fasta embeded in GFF3 file)
+genome=</path/to/genome/assembly-fasta> #genome sequence (fasta file or fasta embeded in GFF3 file)
 organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
 
 #-----Re-annotation Using MAKER Derived GFF3
@@ -15,11 +15,11 @@ other_pass=0 #passthrough anyything else in maker_gff: 1 = yes, 0 = no
 #-----EST Evidence (for best results provide a file for at least one)
 est= #set of ESTs or assembled mRNA-seq in fasta format
 altest= #EST/cDNA sequence file in fasta format from an alternate organism
-est_gff= #aligned ESTs or mRNA-seq from an external GFF3 file
+est_gff=<path/to/cufflinks/gff-file> #aligned ESTs or mRNA-seq from an external GFF3 file
 altest_gff= #aligned ESTs from a closly relate species in GFF3 format
 
 #-----Protein Homology Evidence (for best results provide a file for at least one)
-protein=  #protein sequence file in fasta format (i.e. from mutiple oransisms)
+protein=/storage/compevolbiol/databases/swissprot/swissprot-plants.fa,/storage/compevolbiol/databases/reference_genomes/Amaranthus_hypocondriacus/Ahypochondriacus_315_v1.0.protein.fa,/storage/compevolbiol/databases/reference_genomes/Chenopodium_quinoa/Cq_PI614886_protein_V1.fa  #protein sequence file in fasta format (i.e. from mutiple oransisms)
 protein_gff=  #aligned protein homology evidence from an external GFF3 file
 
 #-----Repeat Masking (leave values blank to skip repeat masking)
@@ -33,12 +33,12 @@ softmask=1 #use soft-masking rather than hard-masking in BLAST (i.e. seg and dus
 #-----Gene Prediction
 snaphmm= #SNAP HMM file
 gmhmm= #GeneMark HMM file
-augustus_species= #Augustus gene prediction species model
+augustus_species=arabidopsis #Augustus gene prediction species model
 fgenesh_par_file= #FGENESH parameter file
 pred_gff= #ab-initio predictions from an external GFF3 file
 model_gff= #annotated gene models from an external GFF3 file (annotation pass-through)
-est2genome=0 #infer gene predictions directly from ESTs, 1 = yes, 0 = no
-protein2genome=0 #infer predictions from protein homology, 1 = yes, 0 = no
+est2genome=1 #infer gene predictions directly from ESTs, 1 = yes, 0 = no
+protein2genome=1 #infer predictions from protein homology, 1 = yes, 0 = no
 trna=0 #find tRNAs with tRNAscan, 1 = yes, 0 = no
 snoscan_rrna= #rRNA file to have Snoscan find snoRNAs
 unmask=0 #also run ab-initio prediction programs on unmasked sequence, 1 = yes, 0 = no
@@ -48,11 +48,11 @@ other_gff= #extra features to pass-through to final MAKER generated GFF3 file
 
 #-----External Application Behavior Options
 alt_peptide=C #amino acid used to replace non-standard amino acids in BLAST databases
-cpus=1 #max number of cpus to use in BLAST and RepeatMasker (not for MPI, leave 1 when using MPI)
+cpus=40 #max number of cpus to use in BLAST and RepeatMasker (not for MPI, leave 1 when using MPI)
 
 #-----MAKER Behavior Options
 max_dna_len=100000 #length for dividing up contigs into chunks (increases/decreases memory usage)
-min_contig=1 #skip genome contigs below this length (under 10kb are often useless)
+min_contig=10000 #skip genome contigs below this length (under 10kb are often useless)
 
 pred_flank=200 #flank for extending evidence clusters sent to gene predictors
 pred_stats=0 #report AED and QI statistics for all predictions as well as models
