@@ -35,6 +35,11 @@ Lines different from the default file:
 - cpus: 40
 - min_contig: 10000
 
+When maker is finihsed use these scripts for post processing of the results:
+
+- `merge_gff.sh` to create a single gff file from the maker results
+- `merge_fasta.sh` to create the fasta files with the cds and peptide sequences
+- `get_zff.sh` to create the zff file used for the snap training
 
 ### snap training
 
