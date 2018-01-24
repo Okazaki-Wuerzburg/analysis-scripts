@@ -7,11 +7,11 @@ formatdb=/usr/bin/formatdb #location of NCBI formatdb executable
 blastall=/usr/bin/blastall #location of NCBI blastall executable
 xdformat= #location of WUBLAST xdformat executable
 blasta= #location of WUBLAST blasta executable
-RepeatMasker= #location of RepeatMasker executable
+RepeatMasker=/storage/compevolbiol/software/RepeatMasker/RepeatMasker/RepeatMasker #location of RepeatMasker executable
 exonerate=/usr/bin/exonerate #location of exonerate executable
 
 #-----Ab-initio Gene Prediction Algorithms
-snap=/usr/bin/snap #location of snap executable
+snap=/storage/compevolbiol/software/snap/snap/snap #location of snap executable
 gmhmme3= #location of eukaryotic genemark executable
 gmhmmp= #location of prokaryotic genemark executable
 augustus= #location of augustus executable
