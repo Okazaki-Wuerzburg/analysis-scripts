@@ -45,6 +45,10 @@ When maker is finihsed use these scripts for post processing of the results:
 
 trainig a snap HMM based on the resulting gff file from the first MAKER run
 
+The workflow follows the commands from the snap readme file. The commands used
+are stored in `run_snap.sh`
+
+
 ### second MAKER run
 
 using MAKER to reannotate the genome with snap. Parameters in second-iteration_opts.ctl
