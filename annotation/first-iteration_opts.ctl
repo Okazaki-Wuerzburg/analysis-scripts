@@ -1,5 +1,5 @@
 #-----Genome (these are always required)
-genome=</path/to/genome/assembly-fasta> #genome sequence (fasta file or fasta embeded in GFF3 file)
+genome=genome_assembly.fa #genome sequence (fasta file or fasta embeded in GFF3 file)
 organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
 
 #-----Re-annotation Using MAKER Derived GFF3
@@ -15,7 +15,7 @@ other_pass=0 #passthrough anyything else in maker_gff: 1 = yes, 0 = no
 #-----EST Evidence (for best results provide a file for at least one)
 est= #set of ESTs or assembled mRNA-seq in fasta format
 altest= #EST/cDNA sequence file in fasta format from an alternate organism
-est_gff=<path/to/cufflinks/gff-file> #aligned ESTs or mRNA-seq from an external GFF3 file
+est_gff=merged.gff #aligned ESTs or mRNA-seq from an external GFF3 file
 altest_gff= #aligned ESTs from a closly relate species in GFF3 format
 
 #-----Protein Homology Evidence (for best results provide a file for at least one)
