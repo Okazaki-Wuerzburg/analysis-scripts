@@ -16,7 +16,7 @@ mkdir "star_$name"
 cd "star_$name"
 
 
-/storage/compevolbiol/software/star/bin/Linux_x86_64/STAR --runThreadN "$threads" --outSAMstrandField intronMotif --genomeDir ../genomeIndex --readFilesIn ../"$reads" ../"$mates"
+/storage/compevolbiol/software/star/bin/Linux_x86_64/STAR --runThreadN "$threads" --outSAMtype BAM SortedByCoordinate --outSAMstrandField intronMotif --genomeDir ../genomeIndex --readFilesIn ../"$reads" ../"$mates"
 
 cd -
 
