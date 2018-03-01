@@ -1,8 +1,24 @@
 #!/bin/bash
 
-/storage/compevolbiol/software/Maker/maker/bin/maker2zff -n -d av-canu-pilon.maker.output/av-canu-pilon_master_datastore_index.log
-#!/bin/bash
+data=$1
 
-/storage/compevolbiol/software/Maker/maker/bin/fasta_merge -d av-canu-pilon.maker.output/av-canu-pilon_master_datastore_index.log
-#!/bin/bash
-/storage/compevolbiol/software/Maker/maker/bin/gff3_merge -d av-canu-pilon.maker.output/av-canu-pilon_master_datastore_index.log
+#create zff file
+echo "#################"
+date
+echo "create zff file"
+echo "#################"
+/storage/compevolbiol/software/Maker/maker/bin/maker2zff -n -d "$data"
+
+#merge fasta files
+echo "#################"
+date
+echo "merge fasta file"
+echo "#################"
+/storage/compevolbiol/software/Maker/maker/bin/fasta_merge -d "$data"
+
+#merge gff files
+echo "#################"
+date
+echo "merge gff file"
+echo "#################"
+/storage/compevolbiol/software/Maker/maker/bin/gff3_merge -d "$data"
