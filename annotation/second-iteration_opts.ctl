@@ -1,9 +1,9 @@
 #-----Genome (these are always required)
-genome=</path/to/genome/assembly-fasta> #genome sequence (fasta file or fasta embeded in GFF3 file)
+genome=genome_assembly.fa #genome sequence (fasta file or fasta embeded in GFF3 file)
 organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
 
 #-----Re-annotation Using MAKER Derived GFF3
-maker_gff=<path/to/gff/from/previous/iteration> #MAKER derived GFF3 file
+maker_gff=maker-1.gff #MAKER derived GFF3 file
 est_pass=1 #use ESTs in maker_gff: 1 = yes, 0 = no
 altest_pass=0 #use alternate organism ESTs in maker_gff: 1 = yes, 0 = no
 protein_pass=0 #use protein alignments in maker_gff: 1 = yes, 0 = no
@@ -31,7 +31,7 @@ prok_rm=0 #forces MAKER to repeatmask prokaryotes (no reason to change this), 1 
 softmask=1 #use soft-masking rather than hard-masking in BLAST (i.e. seg and dust filtering)
 
 #-----Gene Prediction
-snaphmm=</path/to/snap-HMM> #SNAP HMM file
+snaphmm=my-genome.hmm #SNAP HMM file
 gmhmm= #GeneMark HMM file
 augustus_species= #Augustus gene prediction species model
 fgenesh_par_file= #FGENESH parameter file
